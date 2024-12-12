@@ -28,6 +28,16 @@
 </div>
 
 @code {
+    string id;
+    string title;
+    string artist;
+    string year;
+    private enum MODE { None, Add, EditDelete };
+    MODE mode = MODE.None;
+
+
+
+
     private bool collapseNavMenu = true;
 
     private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
@@ -37,3 +47,13 @@
         collapseNavMenu = !collapseNavMenu;
     }
 }
+
+
+
+
+
+<div class="nav-item px-3">
+    <NavLink class="nav-link" href="songs">
+        <span class="oi oi-list-rich" aria-hidden="true"></span> Songs
+    </NavLink>
+</div>
